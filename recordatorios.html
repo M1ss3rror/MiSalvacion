@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recordatorios</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/5dbe98442b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--Banner-->
+        <div class="row">
+            <div clas="col-12">
+                <img class="w-100" src="img/banner.jpg">
+            </div>
+        </div>
+
+        <!--Navegador-->
+        <div class="row">
+            <div class="col-12 bg-dark">
+                <ul class="nav d-flex justify-content-center barra">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="notas.html"><i class="far fa-clipboard"></i> Notas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="recordatorios.html"><i class="far fa-calendar-check"></i> Recordatorios</a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Ingreso de recordatorio-->
+        <div class="row mt-5">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <form class="form-group mb-2">
+                    <textarea class="form-control form-control-lg" type="text" id="recordatorio" placeholder="Ingresa recordatorio..." required></textarea> <br>
+                    <div class="form-row">
+                        <div class="col">
+                            <input class="form-control form-control-lg" type="date" id="recordatorio_date" aria-describedby="button-addon2" required> <br>
+                        </div>
+                        <div class="col">
+                            <input class="form-control form-control-lg" type="time" id="recordatorio_time" aria-describedby="button-addon2" required> <br>
+                        </div>
+                    </div>
+                    <div id="alert"></div>
+                    <button class="btn btn-dark" type="button" id="ingresar" onclick="agregar()">Agregar recordatorio</button>
+                </form>
+
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <!--Resultados de datos ingresados-->
+        <div class="row mt-5">
+            <div class="col-4"></div>
+            <div class="col-5">
+                <div class="text-white d-flex justify-content-center">
+
+                    <div class="list-group" id="lista">
+                    </div>
+                    <br>
+
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <script src="js/main.js"></script>
+            <script src="js/jquery.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
